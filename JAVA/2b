@@ -1,0 +1,48 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    
+	   Scanner sc=new Scanner(System.in);
+		System.out.println("enter 1 for dec_to_binary or 2 for binary_to_dec");
+		int c=sc.nextInt();
+		if(c==1){
+		System.out.println("enter a decimal number:");
+		int a =sc.nextInt();
+		int i,k=0;
+		int binary[]=new int[10];
+		
+		while(a>1){
+		i=a%2;
+		binary[k]=i;
+		k++;
+		a=a/2;
+		} 
+		binary[k]=a;
+		System.out.print("binary is:");
+		for(i=k;i>=0;i--){
+		  System.out.print(binary[i]);
+		}
+		System.out.println();
+		}
+		else{
+		//binary to decimal
+		System.out.println("enter a binary number:");
+		int bin =sc.nextInt();
+		int i=0,k=0;//k and i are already defined
+		int deci_sum=0,power;
+		
+		while(bin!=0){
+		    k=bin%10;
+		    power=(int)Math.pow(2,i);
+		    k=k*power;
+		    deci_sum+=k;
+		    bin=bin/10;
+		    i++;
+		    
+		}
+		
+		System.out.println("decimal number is:"+deci_sum);
+		}
+	}
+}
