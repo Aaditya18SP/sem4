@@ -1,1 +1,20 @@
-praC1
+var1=readline("enter how many nmbers u want in series:")
+var1=as.integer(var1)
+print("the fibonaaci series is:\n")
+i=1L
+x=0L
+y=1L
+while(i <=var1){
+cat(x," ")
+d=x
+x=y
+y=d+y
+
+
+
+
+
+
+i=i+1
+}
+print("\n")
