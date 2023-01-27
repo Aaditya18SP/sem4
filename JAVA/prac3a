@@ -1,0 +1,61 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		//System.out.println("Enter a string");
+		//Scanner sc= new Scanner(System.in);
+		String in_user="hello ,1 .2 @ 3";
+		in_user=in_user.toLowerCase();
+		int letter=0,space=0,num=0,other=0,lc=0,nc=0,sc=0;
+		char b;
+		char letter_arr[]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+		char num_arr[]={'1','2','3','4','5','6','7','8','9','0'};
+		
+		
+		for(int i=0;i<in_user.length();i++)
+		{
+		    b=in_user.charAt(i);
+		    for(int j=0;j<26;j++)
+		    {
+		        if(b==letter_arr[j])
+		        {
+		            letter++;
+		            lc=1;
+		        }
+		        
+		        
+		    }
+		    for(int j=0;j<10;j++)
+		    {
+		        if(b==num_arr[j])
+		        {
+		            num++;
+		            nc=1;
+		        }
+		        
+		    }
+		    
+		  if(b==' ')//Character.isSpaceChar(b)
+		        {
+		           space++;
+		           sc=1;
+		        }
+		        
+		       /*else if(nc!=1 || lc!=1 || sc!=1 ){
+		           other++;
+		       }
+		        */
+		    
+		    
+		    
+		}
+	System.out.println("the number of letters are:"+letter);
+	System.out.println("the number of numbers are:"+num);
+	System.out.println("the number of spaces are:"+space);
+	System.out.println("the number of other characters are:"+other);
+	
+	
+	}
+}
