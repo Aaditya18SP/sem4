@@ -1,14 +1,18 @@
 import java.util.*;
 public class Main
 {
-	public static void main(String[] args){
-	    
-	   Scanner sc=new Scanner(System.in);
-	   String a=sc.next();
-	   int i=0;
-	   for(i=a.length();i>=0;i--){
-	       System.out.print(a.charAt(i));
-	       
-	   }
+	public static void main(String[] args) {
+		System.out.println("Enter a string");
+		Scanner sc= new Scanner(System.in);
+		String in_user=sc.next();
+		String reversed ="";
+		char b;
+		
+		for(int i=in_user.length()-1;i>=0;i--){
+		    b=in_user.charAt(i);
+		    reversed+=b;
+		    
+		}
+	System.out.println("the reversed string is:"+reversed);	
 	}
 }
