@@ -1,0 +1,72 @@
+
+
+
+import java.util.*;
+ class SortData{
+    public void asec(int arr[]){
+        int temp;
+        for(int i =0;i<arr.length;i++){
+            for(int j=0;j<arr.length-i-1;j++){
+                if(arr[j]>arr[j+1]){
+                  temp=arr[j];
+                  arr[j]=arr[j+1];
+                  arr[j+1]=temp;
+                }
+            }
+        }
+        System.out.println("sorted array is:");
+        for(int i=0;i<arr.length;i++){
+            System.out.print(" "+arr[i]);
+        }
+        
+    }
+    
+    public void desc(int arr[]){
+        int temp;
+        for(int i =0;i<arr.length;i++){
+            for(int j=0;j<arr.length-i-1;j++){
+                if(arr[j]<arr[j+1]){
+                  temp=arr[j];
+                  arr[j]=arr[j+1];
+                  arr[j+1]=temp;
+                }
+            }
+        }
+        System.out.println("sorted array is:");
+        System.out.println("sorted array is:");
+        for(int i=0;i<arr.length;i++){
+            System.out.print(" "+arr[i]);
+        }
+    }
+    
+    
+    
+    
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("enter size of array:");
+	   int size=sc.nextInt();
+	   int a1,switchvar;
+	   int arr[]=new int[size];
+	   for(int i=0;i<size;i++){
+	       System.out.print("enter element of array:");
+	   a1=sc.nextInt();
+	   arr[i]=a1;
+	   }
+	   SortData obj1=new SortData();
+	   System.out.print("enter 1 for asec , 2 for desc:");
+	   switchvar=sc.nextInt();
+	   if(switchvar==1){
+	       obj1.asec(arr);
+	       
+	   }
+	   else{
+	       obj1.desc(arr);
+	      
+	   }
+	}
+}
