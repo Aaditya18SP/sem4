@@ -1,0 +1,40 @@
+apple=c('red','green','blue')
+print(apple)
+print(class(apple))
+
+#list
+l2=list(1,2,3,4)
+print(l2)
+
+#matrix
+m1=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3,byrow=TRUE)
+rownames(m1)=c('A','B','C')#to rename rows
+colnames(m1)=c('E','F','G')#to rename columns
+print(m1)
+
+#array
+arr=array(c(1,2,3),dim=c(2,2))
+print(arr)
+
+#factors
+#is an object
+fruit <- c("apple","orange","pineapple")
+factor_fruit <- factor(fruit)
+cat("the factors are:\n")
+print(factor_fruit)
+print(nlevels(factor_fruit))
+
+
+#dataframes
+#table 
+
+df1=data.frame(
+name=c("abc","xyz","mno" ),
+rollno=c(17,30,31),
+age=c(12,13.5,26.6)
+)
+print(df1)
+
+
+
+
