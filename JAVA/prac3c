@@ -1,0 +1,39 @@
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("enter size of array:");
+	   int size=sc.nextInt();
+	   int a1,smallest,largest;
+	   int arr[]=new int[size];
+	   for(int i=0;i<size;i++){
+	       System.out.print("enter element of array:");
+	   a1=sc.nextInt();
+	   arr[i]=a1;
+	   }
+	   
+	   //smallest
+	   smallest=largest=arr[0];
+	   for(int i=0;i<size;i++){
+	       if(smallest>arr[i]){
+	           smallest=arr[i];
+	       }
+	           
+	   }
+	   //largest
+	   for(int i=0;i<size;i++){
+	       if(largest<arr[i]){
+	           largest=arr[i];
+	       }
+	           
+	   }
+	   System.out.println("smallest value in array:"+smallest);
+	   System.out.println("largest value in array:"+largest);
+	   
+	
+	}
+}
