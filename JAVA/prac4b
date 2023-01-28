@@ -1,0 +1,35 @@
+
+
+
+import java.util.*;
+ class construct{
+     char a ='8';
+     int c,d;
+     construct(){
+         c=(int) a;
+         System.out.println("ascii value of " +a+" is:"+c);
+         d=a-'0';
+         System.out.println("integer value " +a+" is:"+d);
+     }
+     construct(char ch){
+         int e,f;
+         e=(int) ch;
+         System.out.println("ascii value " +ch+" is:"+e);
+         f=ch-'0';
+         System.out.println("integer value " +ch+" is:"+f);
+     }
+    
+    
+    
+    
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    construct ob=new construct();
+	    construct ob1=new construct('6');
+	    
+	  
+	}
+}
