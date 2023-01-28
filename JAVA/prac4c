@@ -1,0 +1,31 @@
+
+
+
+import java.util.*;
+ abstract class construct{
+      static int a=10,b=10,c;
+     abstract void show();
+     static int add1(){
+         c=a+b;
+         return c;
+     }
+     
+    
+    
+    
+    
+}
+public class Main extends construct
+{
+    void show(){
+	        System.out.println("summation is "+construct.add1());
+	    }
+	public static void main(String[] args) {
+	    Main ob=new Main();
+	    
+	    
+	    ob.show();
+	    
+	  
+	}
+}
