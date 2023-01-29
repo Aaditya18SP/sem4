@@ -9,12 +9,11 @@ print("the multiplication is:\n")
 for(i in 1:3){
 for(j in 1:3){
 sum=0L
-product=1L
-for(k in 1:3){
 
-product=m1[i,j]*m2[j,k]
+for(k in 1:3){
+product=m1[i,k]*m2[k,j]
 sum=sum+product
-m3[i,k]=sum
+m3[i,j]=sum
 }
 }
 }
