@@ -88,6 +88,7 @@ public class Main
 		   
 		   
 		}
+		System.out.println("the addition is:");
 		//the resultant string is stored reverse, hence reverse string to get proper output.
 		for(int i=b3.length()-1;i>=0;i--){
 		    
