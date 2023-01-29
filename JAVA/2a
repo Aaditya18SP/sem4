@@ -1,0 +1,94 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.print("Enter 1st binary number:");
+		String b1= sc.nextLine();
+		System.out.print("Enter 2nd binary number:");
+		String b2= sc.nextLine();
+		String b3="";//result 
+		int m,n,xoresult,len,carry=0,temp,len_diff;
+		char ch,ch2,ch3,reverse;
+		//equate lengths
+		if(b1.length()>b2.length()){
+		     len_diff=b1.length()-b2.length();
+		     
+		     for(int i=0;i<len_diff;i++){
+		         //b5+=b4.concat("0");
+		         b2=0+b2;
+		}
+		     //b2=b5+b2;
+		     len=b1.length();
+		}
+		else{
+		    len_diff=b2.length()-b1.length();
+		     for(int i=0;i<len_diff;i++){
+		          b1=0+b1;
+		}
+		
+		     len=b2.length();
+		}
+		 //binary addition
+		
+		for(int i=len-1;i>=0;i--){ //start from
+		   ch=b1.charAt(i);
+		   m=ch-'0';
+		   ch2=b2.charAt(i);
+		   n=ch2-'0';
+		       
+		   
+		     if(carry==1){//if carry is generated in between the numbers
+		      temp=carry^m;
+		      
+		      
+		      //to check whether the carry is generated ny this operation
+        		       if(carry==1 & m==1){
+        		           carry=1;
+        		       }
+        		       else {
+        		           carry=0;  
+        		       }
+        		       xoresult=temp^n;
+        		       // 1+1+1 --> this is broken down into 1+1 then result+1, either opeartion might generate carry
+        		       
+        		       if( carry==0 & temp==1 & n==1 ){
+        		           carry=1;
+        		       }
+        		      
+        		  
+        	b3+=xoresult;
+        		   //if bit is msb
+        		   if(carry==1 & i==0){
+        		       b3+=carry;
+        		       }
+        		       
+        		   }
+		   
+		   else{
+		   xoresult=m^n;
+		   //to check whether the carry is generated ny this operation
+		       if(m==1&n==1){
+		           carry=1;
+		       }
+		       else {
+		           carry=0;
+		       }
+		   b3+=xoresult;
+		   
+		    //if bit is msb
+		   if(i==0 & carry==1){
+		       b3+=carry;
+		       }
+		       
+		   }
+		   
+		   
+		}
+		for(int i=b3.length()-1;i>=0;i--){
+		    
+		System.out.print(b3.charAt(i));
+		}
+		
+	}
+}
