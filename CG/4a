@@ -5,9 +5,25 @@ void main(){
  int gd=DETECT,gm;
  initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
  float x1,y1,x2,y2,m; //m is for slope
- x1=0;y1=100;x2=400;y2=300;
+ //x1=0;y1=100;x2=400;y2=300;
+ cout<<"enter x cooridinate of1st point:";
+ cin>>x1;
+
+ cout<<"enter y cooridinate of1st point:";
+ cin>>y1;
+
+ cout<<"enter x cooridinate of2nd point:";
+ cin>>x2;
+
+ cout<<"enter x cooridinate of 2nd point:";
+ cin>>y2;
+
  m=(y2-y1)/(x2-x1);
  int plotx,ploty;
+ //print 1st point
+ plotx=(int)(x1+0.5);
+ ploty=(int)(y1+0.5);
+ putpixel(plotx,ploty,WHITE);
  //loop
  while(x1!=x2 && y1!=y2){
   if(m<1){
@@ -16,6 +32,8 @@ void main(){
   plotx=(int)(x1+0.5); //to round off
   ploty=(int)(y1+0.5); //to round off
   //line(i,j,plotx,ploty);
+ // cout<<" x is :"<<plotx<<"\n";
+ // cout<<" y is :"<<ploty<<"\n";
   putpixel(plotx,ploty,WHITE);
 
 
