@@ -1,0 +1,61 @@
+#include <iostream.h>
+#include <graphics.h>
+#include <conio.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+float delx,dely,p,x1,x2,y1,y2;
+int plotx,ploty;
+cout<<"enter x cooridinate of1st point:";
+ cin>>x1;
+
+ cout<<"enter y cooridinate of1st point:";
+ cin>>y1;
+
+ cout<<"enter x cooridinate of2nd point:";
+ cin>>x2;
+
+ cout<<"enter y cooridinate of 2nd point:";
+ cin>>y2;
+
+delx=x2-x1;
+dely=y2-y1;
+
+p=2*(dely)-delx;
+plotx=(int)(x1+0.5);
+ploty=(int)(y1+0.5);
+//cout<<"x is :"<<plotx<<"\n";
+//cout<<"y is :"<<ploty<<"\n";
+putpixel(plotx,ploty,WHITE);
+//loop
+while(x1!=x2 && y1!=y2){
+if(p<=0){
+ x1=x1+1;
+ y1=y1;
+ p=p+(2*dely);
+ plotx=(int)(x1+0.5);
+ ploty=(int)(y1+0.5);
+//cout<<"x is :"<<plotx<<"\n";
+//cout<<"y is :"<<ploty<<"\n";
+putpixel(plotx,ploty,WHITE);
+}
+else{
+ x1=x1+1;
+ y1=y1+1;
+ p=p+(2*dely)-(2*delx);
+ plotx=(int)(x1+0.5);
+ ploty=(int)(y1+0.5);
+//cout<<"x is :"<<plotx<<"\n";
+//cout<<"y is :"<<ploty<<"\n";
+putpixel(plotx,ploty,WHITE);
+
+}
+
+
+
+
+
+}
+getch();
+closegraph();
+}
