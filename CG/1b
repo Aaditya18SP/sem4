@@ -1,0 +1,47 @@
+ #include <graphics.h>
+ #include <iostream.h>
+ #include <conio.h>
+ void main(){
+ int gd=DETECT,gm;
+ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+ int x = getmaxx()/2;
+ int y =getmaxy()/2;
+ int interx,intery,x1,y1;
+ x1=x;
+ y1=y;
+ line(x,0,x,getmaxy());
+ line(0,y,getmaxx(),y);
+ interx=x/10;//length of each interval
+ intery=y/10;
+ //postitive x
+ for(int i=0;i<10;i++){
+  outtextxy(x,y,"i");
+  x+=interx;
+ // y+=intery;
+ }
+ x=x1;y=y1;
+ //negative y
+ for(i=0;i<10;i++){
+  outtextxy(x,y,"i");
+  x-=interx;
+ // y+=intery;
+ }
+x=x1;y=y1;
+ //negative y
+ for(i=0;i<10;i++){
+  outtextxy(x,y,"i");
+  y+=intery;
+ }
+ x=x1;y=y1;
+ //negative y
+ for(i=0;i<10;i++){
+  outtextxy(x,y,"i");
+  y-=intery;
+ }
+
+
+ getch();
+ closegraph();
+
+
+ }
