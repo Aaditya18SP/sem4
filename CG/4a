@@ -1,0 +1,55 @@
+#include <graphics.h>
+#include <iostream.h>
+#include <conio.h>
+void main(){
+ int gd=DETECT,gm;
+ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+ float x1,y1,x2,y2,m; //m is for slope
+ x1=0;y1=100;x2=400;y2=300;
+ m=(y2-y1)/(x2-x1);
+ int plotx,ploty;
+ //loop
+ while(x1!=x2 && y1!=y2){
+  if(m<1){
+  x1=x1+1.0;
+  y1=y1+m;
+  plotx=(int)(x1+0.5); //to round off
+  ploty=(int)(y1+0.5); //to round off
+  //line(i,j,plotx,ploty);
+  putpixel(plotx,ploty,WHITE);
+
+
+  }
+
+  else if(m>1){
+
+  x1=x1+(1/m);
+  y1=y1+m;
+   plotx=(int)(x1+0.5); //to round off
+  ploty=(int)(y1+0.5); //to round off
+  //line(i,j,plotx,ploty);
+  putpixel(plotx,ploty,WHITE);
+
+  }
+
+  else{
+  x1=x1+1;
+  y1=y1+1;
+   plotx=(int)(x1+0.5); //to round off
+  ploty=(int)(y1+0.5); //to round off
+  //line(i,j,plotx,ploty);
+  putpixel(plotx,ploty,WHITE);
+
+  }
+
+
+
+ }
+
+
+
+
+ getch();
+ closegraph();
+
+}
