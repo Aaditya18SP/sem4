@@ -1,0 +1,27 @@
+ #include <graphics.h>
+ #include <iostream.h>
+ #include <conio.h>
+ void main(){
+ int gd=DETECT,gm;
+ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+ int x=getmaxx()/2;
+ //int x1=getmaxx()+1000;
+ int y=getmaxy()/2;
+ line(x,0,x,getmaxy());
+ line(0,y,getmaxx(),y);
+
+ circle(x/2,y/2,50);//center;x,y ,radius
+ outtextxy(50,y-20,"this is circle");
+
+ ellipse(120,y+100,0,360,80,50);//center coords;x,y ,start-angle,end,angle,x-radius,y-radius
+ outtextxy(100,getmaxy()-50,"this is ellipse");
+
+ ellipse(x+150,y+150,0,180,80,50);//half ellipse
+ outtextxy(x+100,getmaxy()-50,"this is half ellipse");
+
+ rectangle(x+50,50,x+250,y-50);//left corner; x coord,y coord ....,right corner:x coord,ycoord
+ outtextxy(x+70,y-20,"this is rectangle");
+
+ getch();
+ closegraph();
+ }
