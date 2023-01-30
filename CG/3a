@@ -1,0 +1,43 @@
+#include <iostream.h>
+#include <graphics.h>
+#include <conio.h>
+#include <dos.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+int x,y;
+x=getmaxx()/2;
+y=getmaxy()/2;
+//circle
+circle(x,y,100);
+delay(1000);
+cleardevice();
+//concentric circles
+circle(x,y,100);
+circle(x,y,75);
+circle(x,y,50);
+circle(x,y,25);
+delay(1000);
+cleardevice();
+//ellipse
+ellipse(x,y,0,360,150,75);
+delay(1000);
+cleardevice();
+//rectangle
+rectangle(x-100,y-50,x+100,y+50);
+delay(1000);
+cleardevice();
+//square
+rectangle(x-50,y-50,x+50,y+50);
+delay(1000);
+cleardevice();
+//line
+line(x-100,y-50,x+100,y+50);
+cleardevice();
+
+
+
+ getch();
+ closegraph();
+
+}
