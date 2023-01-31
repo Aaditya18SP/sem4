@@ -1,2 +1,0 @@
-print('heeloworld')
-print(['wewwe'])
