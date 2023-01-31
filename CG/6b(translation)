@@ -1,0 +1,36 @@
+#include <iostream.h>
+#include <conio.h>
+#include <graphics.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+int x1,y1,x2,y2,tx,ty;
+cout<<"enter cords of rect:";
+cout<<"for left top enter x:";
+cin>>x1;
+cout<<"for left top enter y:";
+cin>>y1;
+cout<<"for rght bottom enter x:";
+cin>>x2;
+cout<<"for right bottom enter y:";
+cin>>y2;
+rectangle(x1,y1,x2,y2);
+cout<<"enter units to tranlate in x:";
+cin>>tx;
+cout<<"enter units to tranlate in y:";
+cin>>ty;
+x1=x1+tx;
+x2=x2+tx;
+y1=y1+ty;
+y2=y2+ty;
+
+cleardevice();
+rectangle(x1,y1,x2,y2);
+
+
+
+
+ getch();
+ closegraph();
+
+}
