@@ -1,0 +1,74 @@
+#include <iostream.h>
+#include <conio.h>
+#include <graphics.h>
+//#include <string.h>
+//#include <dos.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+int x1,y1,x2,y2,sx,sy;
+int i,j,k,sum1,prod;
+
+cout<<" enter x1:";
+cin>>x1;
+cout<<"enter y1:";
+cin>>y1;
+cout<<"enter x2:";
+cin>>x2;
+cout<<"enter y2:";
+cin>>y2;
+
+rectangle(x1,y1,x2,y2);
+int shape_mat[2][2];
+shape_mat[0][0]=x1;
+shape_mat[0][1]=y1;
+shape_mat[1][0]=x2;
+shape_mat[1][1]=y2;
+
+cout<<"units to scale in x axis:";
+cin>>sx;
+cout<<"units to scale in y axis:" ;
+cin>>sy;
+int scl_mat[2][2];
+scl_mat[0][0]=sx;
+scl_mat[0][1]=0;
+scl_mat[1][0]=0;
+scl_mat[1][1]=sy;
+
+int final_mat[2][2];
+
+
+for(i=0;i<2;i++){
+ for(j=0;j<2;j++){
+ sum1=0;
+  for(k=0;k<2;k++){
+     prod=shape_mat[i][k]*scl_mat[k][j];
+     sum1+=prod;
+  }
+  final_mat[i][j]=sum1;
+
+
+ }
+
+}
+//delay(1000);
+//cleardevice();
+x1=final_mat[0][0];
+y1=final_mat[0][1];
+x2=final_mat[1][0];
+y2=final_mat[1][1];
+rectangle(x1,y1,x2,y2);
+
+
+
+
+
+
+
+
+
+getch();
+closegraph();
+
+
+}
