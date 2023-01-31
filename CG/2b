@@ -3,35 +3,37 @@
 void main(){
 int gd=DETECT,gm;
 initgraph(&gd,&gm,"C:\\TURBOC3\\bgi");
-
+setfillstyle(LTBKSLASH_FILL,GREEN);
 line(200,200,400,200);
-line(200,200,230,250);
 line(400,200,430,250);
-
-//line(230,250,230,400);
-line(170,250,430,250);
-setfillstyle(SOLID_FILL,BROWN);
-setcolor(WHITE);
+line(230,250,430,250);
+line(200,200,230,250);
 floodfill(220,220,WHITE);
-setcolor(WHITE);
 line(200,200,170,250);
+line(170,250,230,250);
+floodfill(190,230,WHITE);
 
 //body
+setfillstyle(SOLID_FILL,BLUE);
 rectangle(170,250,430,400);
 
+floodfill(171,251,WHITE);
 line(230,250,230,400);
-
+setfillstyle(INTERLEAVE_FILL,LIGHTBLUE);
 rectangle(185,300,215,400); //door
+floodfill(186,301,WHITE);
 
 rectangle(245,280,300,335); //window1
-
+floodfill(246,281,WHITE);
 
 rectangle(345,280,400,335); //window 2
-
+floodfill(346,281,WHITE);
+setfillstyle(CLOSE_DOT_FILL,LIGHTGRAY);
 rectangle(360,170,380,200); //chimney
-
+floodfill(361,171,WHITE);
+setfillstyle(WIDE_DOT_FILL,LIGHTGRAY);
 circle(200,230,10);//circular window
-
+floodfill(200,230,WHITE);
 getch();
 closegraph();
 }
