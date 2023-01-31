@@ -9,6 +9,7 @@ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
 int x1,y1,x2,y2,x3,y3,sx,sy;
 int i,j,k,sum1,prod;
 
+
 cout<<" enter x1:";
 cin>>x1;
 cout<<"enter y1:";
@@ -21,7 +22,8 @@ cout<<"enter x3:";
 cin>>x3;
 cout<<"enter y3:";
 cin>>y3;
-
+int poly[]={x1,y1,x2,y2,x3,y3,x1,y1};
+drawpoly(4,poly);
 //rectangle(x1,y1,x2,y2);
 int shape_mat[3][2];
 shape_mat[0][0]=x1;
@@ -70,7 +72,11 @@ y3=final_mat[2][1];
     cout<<final_mat[i][j]<<" ";
   }
   cout<<"\n";
+
+
  }
+int poly2[]={x1,y1,x2,y2,x3,y3,x1,y1};
+ drawpoly(4,poly2);
 //rectangle(x1,y1,x2,y2);
 
 
