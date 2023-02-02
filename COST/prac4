@@ -1,6 +1,7 @@
 data <- read.csv("D:\\3944A017 SYIT\\COST\\practical\\prac4.csv")
 print(data)
 
+
 class = data$class
 print(class)
  frequency =c(data$frequency)
