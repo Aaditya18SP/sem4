@@ -1,0 +1,29 @@
+mode=function(x){
+unique_x=unique(x);
+tabulate_x=tabulate(match(x,unique_x));
+unique_x[tabulate_x==max(tabulate_x)];
+}
+
+size=readline("enter number of elements:");
+size=as.integer(size);
+i=1L;
+v1=c();
+while(i<=size){
+v=readline("enter number for mean:");
+v1=append(v1,as.integer(v));
+i=i+1;
+}
+print(v1);
+mean_vec=mean(v1);
+median_vec=median(v1);
+mode_vec=mode(v1);
+quartile_vec=quantile(v1,probs=c(0.25,0.5,0.75))
+range_vec=range(v1); 
+iq_range=IQR(v1);
+cat("mean is :",mean_vec,"\n");
+cat("median is :",median_vec,"\n");
+cat("mode is :",mode_vec,"\n");
+cat("quartiles are :",quartile_vec,"\n")
+cat("range is :",range_vec,"\n")
+cat("also range is:",max(v1)-min(v1),"\n");
+cat("interquartile range is:",IQR(v1),"\n");
