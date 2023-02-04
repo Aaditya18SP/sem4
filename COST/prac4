@@ -1,21 +1,23 @@
 data <- read.csv("D:\\3944A017 SYIT\\COST\\practical\\prac4.csv")
 print(data)
 
-
 class = data$class
-print(class)
- frequency =c(data$frequency)
+
+frequency =c(data$frequency)
+
+
+xifi=c()
 sum_xifi=0L
+sum_freq=0L
 i=1L
-print(frequency)
+
 while(i<=length(class)){
-xifi=append(xifi,c(class[i] * frequency[i]));
-#sum_xifi=sum_xifi+xifi
+xifi=append(xifi,class[i] * frequency[i])
+sum_xifi=sum_xifi+xifi[i]
+sum_freq=sum_freq+frequency[i]
 i=i+1
 }
-mean_data=mean(xifi)
-cat("the mean is :",mean_data)
-median_data=median(xifi)
-cat("the median is :",median_data)
+mean_data=sum_xifi/sum_freq
+cat("the mean is :",mean_data,"\n")
 
 
