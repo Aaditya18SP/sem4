@@ -46,3 +46,20 @@ cat("L1 is:" ,l1,"\n")
 cat("cf_median is:" ,cf_median,"\n")
 cat("f_median is:" ,f_median,"\n")
 cat("the median is :",med,"\n")
+
+OUTPUT
+class class_m frequency
+1  2 to 4       3         3
+2  4 to 6       5         4
+3  6 to 8       7         2
+4 8 to 10       9         1
+    class class_m frequency cu_freq
+1  2 to 4       3         3       3
+2  4 to 6       5         4       7
+3  6 to 8       7         2       9
+4 8 to 10       9         1      10
+n/2 is : 5.5 
+L1 is: 4 
+cf_median is: 3 
+f_median is: 4 
+the median is : 5.25
