@@ -42,4 +42,23 @@ cat("f1:" ,f1,"\n")
 cat("f2:" ,f2,"\n")
 cat("the mode is :",mode_class,"\n")
 
+OUTPUT
+ class class_m frequency
+1  1 to 3       2         7
+2  3 to 5       4         8
+3  5 to 7       6         2
+4  7 to 9       8         2
+5 9 to 11      10         1
+    class class_m frequency cu_freq
+1  1 to 3       2         7       7
+2  3 to 5       4         8      15
+3  5 to 7       6         2      17
+4  7 to 9       8         2      19
+5 9 to 11      10         1      20
+j is: 2 
+L1 is: 3 
+f0 is: 7 
+f1: 8 
+f2: 2 
+the mode is : 3.285714 
 
