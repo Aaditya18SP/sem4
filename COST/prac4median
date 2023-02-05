@@ -8,6 +8,7 @@ i=1L
 cu_freq=c()
 n=0L
 
+
 while(i<=length(class)){
 n=n+frequency[i]
 cu_freq=append(cu_freq,n)
