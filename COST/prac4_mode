@@ -1,3 +1,4 @@
+data <-read.csv("D:\\ADITYA FYBscIT\\SUBJECTS\\4TH SEM\\COST\\Book2.csv")
 data <- read.csv("D:\\ADITYA FYBscIT\\SUBJECTS\\4TH SEM\\COST\\Book2.csv")
 print(data)
 class = data$class_m
