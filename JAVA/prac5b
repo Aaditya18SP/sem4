@@ -1,0 +1,60 @@
+import java.util.*;
+class person{
+int age;
+String name;
+void getinfo(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name:");
+name=sc.nextLine();
+System.out.print("enter age:");
+age=sc.nextInt();
+System.out.println("in person class");
+}
+void showinfo(){
+System.out.println("name is:"+name);
+System.out.println("age is:"+age);
+}
+}
+class employee extends person{
+String empid;
+void getinfo(){
+Scanner sc=new Scanner(System.in);
+/*System.out.print("enter name:");
+name=sc.nextLine();
+System.out.print("enter age:");
+age=sc.nextInt();*/
+System.out.print("enter employee id:");
+empid=sc.nextLine();
+//System.out.println("in employee class");
+}
+
+void showinfo(){
+System.out.println("employee id is:"+empid);
+
+}
+}
+
+class meth_over{
+public static void main(String args[]){
+person p1=new person();
+employee e1=new employee();
+person ref;
+ref=p1;
+ref.getinfo();
+ref.showinfo();
+
+ref=e1;
+ref.getinfo();
+ref.showinfo();
+
+}
+}
+
+OUTPUT:
+enter name:a1
+enter age:12
+in person class
+name is:a1
+age is:12
+enter employee id:asp1808
+employee id is:asp1808
