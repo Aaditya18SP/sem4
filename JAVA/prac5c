@@ -1,0 +1,66 @@
+import java.util.*;
+interface academics{
+ 
+abstract  int getmarks();
+}
+
+
+interface sports{
+ float sport=0;
+abstract float get_smarks();
+
+}
+
+class m_total implements academics ,sports {
+float total;
+public int getmarks(){
+int eng,maths;
+Scanner sc=new Scanner(System.in);
+System.out.print("enter marks for english:");
+eng=sc.nextInt();
+System.out.print("enter marks for maths:");
+maths=sc.nextInt();
+System.out.println(" marks in english:"+eng);
+System.out.println(" marks in maths:"+maths);
+return (maths+eng);
+
+}
+public float get_smarks(){
+float sport;
+Scanner sc=new Scanner(System.in);
+System.out.print("enter marks for sports:");
+sport=sc.nextFloat();
+System.out.println(" marks in sports:"+sport);
+return sport;
+}
+public void showmarks(){
+total=getmarks()+get_smarks();
+
+System.out.println("total marks:"+total);
+
+}
+
+
+}
+
+class mul_inherit{
+public static void main(String args[]){
+m_total m1=new m_total();
+
+m1.showmarks();
+
+
+
+
+
+}
+}
+
+output:
+enter marks for english:23
+enter marks for maths:34
+ marks in english:23
+ marks in maths:34
+enter marks for sports:45
+ marks in sports:45.0
+total marks:102.0
