@@ -1,0 +1,52 @@
+import java.util.*;
+class person{
+String name;
+int age;
+
+void getinfo(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name:");
+name=sc.nextLine();
+System.out.print("enter age:");
+age=sc.nextInt();
+
+}
+}
+class student extends person{
+String rollno,inst;
+void addinfo(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter rollno:");
+rollno=sc.nextLine();
+System.out.print("enter institution:");
+inst=sc.nextLine();
+}
+void showinfo(){
+System.out.println("name is :"+ name);
+System.out.println("roll no is :"+rollno);
+System.out.println("age is :"+age);
+System.out.println("institution is :"+inst);
+
+}
+
+}
+
+class s_inherit{
+public static void main(String args[]){
+student s1=new student();
+s1.getinfo();
+s1.addinfo();
+s1.showinfo();
+
+}
+}
+
+OUTPUT:
+enter name:abcd
+enter age:23
+enter rollno:a017
+enter institution:vaze
+name is :abcd
+roll no is :a017
+age is :23
+institution is :vaze
