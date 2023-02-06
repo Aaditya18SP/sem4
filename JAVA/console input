@@ -1,0 +1,21 @@
+class c_in{
+public static void main(String args[]){
+String s="";
+if(args.length>0){
+for(String i:args){
+s+=i;
+}
+System.out.println("command line arguments are:"+s);
+}
+else{
+System.out.println("no command line arguments");
+}
+
+
+}
+}
+
+
+OUTPUT:
+java c_in hello world
+command line arguments are:helloworld
