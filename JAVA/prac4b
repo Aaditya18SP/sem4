@@ -1,6 +1,3 @@
-
-
-
 import java.util.*;
  class construct{
      char a ='8';
@@ -17,19 +14,28 @@ import java.util.*;
          System.out.println("ascii value " +ch+" is:"+e);
          f=ch-'0';
          System.out.println("integer value " +ch+" is:"+f);
-     }
-    
-    
-    
-    
-    
+     } 
 }
 public class Main
 {
-	public static void main(String[] args) {
-	    construct ob=new construct();
-	    construct ob1=new construct('6');
-	    
-	  
+public void finalize(){
+System.out.println("object destroyed\n");
+}
+
+public static void main(String[] args) {
+construct ob=new construct();
+construct ob1=new construct('6');
+System.out.println("destructor");
+Main obj =new Main();
+obj.finalize();
+obj=null;  
 	}
 }
+
+OUTPUT:
+ascii value of 8 is:56
+integer value 8 is:8
+ascii value 6 is:54
+integer value 6 is:6
+destructor
+object destroyed
