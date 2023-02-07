@@ -1,0 +1,93 @@
+import java.util.*;
+class matrix{
+public static void main(String args[]){
+int arr1[][]=new int[3][3];
+int arr2[][]=new int[3][3];
+int matadd[][]=new int[3][3];
+int matmul[][]=new int[3][3];
+int i,j,k;
+
+Scanner sc=new Scanner(System.in);
+System.out.println("for first matrix:");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print("enter element:");
+arr1[i][j]=sc.nextInt();
+}
+}
+
+System.out.println("for 2nd matrix:");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print("enter element:");
+arr2[i][j]=sc.nextInt();
+}
+}
+
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+matadd[i][j]=arr1[i][j]+arr2[i][j];
+}
+}
+
+System.out.println("the summation is:");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print(matadd[i][j]+"  ");
+}
+System.out.println();
+}
+
+int sum=0,prod;
+ //multi
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+sum=0;
+for(k=0;k<3;k++){
+prod=arr1[i][k]*arr2[k][j];
+sum=sum+prod;
+}
+matmul[i][j]=sum;
+}
+
+}
+System.out.println("the product is:");
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+System.out.print(matmul[i][j]+" ");
+}
+System.out.println();
+}
+
+}
+}
+
+OUTPUT:
+for first matrix:
+enter element:1
+enter element:1
+enter element:1
+enter element:2
+enter element:2
+enter element:2
+enter element:3
+enter element:3
+enter element:3
+for 2nd matrix:
+enter element:1
+enter element:1
+enter element:1
+enter element:2
+enter element:2
+enter element:2
+enter element:3
+enter element:3
+enter element:3
+the summation is:
+2  2  2
+4  4  4
+6  6  6
+the product is:
+6 6 6
+12 12 12
+18 18 18
