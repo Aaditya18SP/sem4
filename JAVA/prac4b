@@ -15,20 +15,21 @@ import java.util.*;
          f=ch-'0';
          System.out.println("integer value " +ch+" is:"+f);
      } 
-}
-public class Main
-{
 public void finalize(){
 System.out.println("object destroyed\n");
 }
+}
+public class Main
+{
+
 
 public static void main(String[] args) {
 construct ob=new construct();
 construct ob1=new construct('6');
 System.out.println("destructor");
-Main obj =new Main();
-obj.finalize();
-obj=null;  
+
+ob.finalize();
+ob=null;  
 	}
 }
 
