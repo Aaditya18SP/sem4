@@ -1,0 +1,75 @@
+import java.util.*;
+class except{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int a=0,b=0,size;
+float c;
+int arr[]= new int[5];
+
+//try{
+System.out.print("enter a number:");
+a= sc.nextInt();
+
+System.out.print("enter 2nd number:");
+b= sc.nextInt();
+//throw new InputMismatchException(" exception caught ");
+
+/*
+}catch(InputMismatchException e){
+System.out.println("enter an integer value");
+}*/
+
+try{
+c=a/b;
+System.out.println("quotient is:"+c);
+
+}
+catch(ArithmeticException e){
+System.out.println("cant divide by zero");
+}
+
+finally{
+System.out.println("in finally block"); 
+System.out.print("enter size of array:");
+size=sc.nextInt();
+try{
+for(int i=0;i<size;i++){
+System.out.print("enter element:");
+arr[i]=sc.nextInt();
+}
+}
+catch(ArrayIndexOutOfBoundsException e){
+System.out.println("Error!!,enter size of array less than or equal to 5");
+}
+catch(Exception e){
+System.out.println("in second catch,error is:"+e.toString());
+}
+finally{
+System.out.print("array is:");
+for(int i=0;i<5;i++){
+System.out.print(arr[i]+" ");
+}
+}
+
+}
+
+
+
+}
+}
+
+
+OUTPUT:
+enter a number:23
+enter 2nd number:0
+cant divide by zero
+in finally block
+enter size of array:6
+enter element:1
+enter element:2
+enter element:3
+enter element:4
+enter element:5
+enter element:6
+Error!!,enter size of array less than or equal to 5
+array is:1 2 3 4 5
