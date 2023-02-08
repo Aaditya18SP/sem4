@@ -1,0 +1,145 @@
+import java.util.*;
+ class vehicle{
+int v_no;
+String brand;
+void vehicle(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter vehicle number:");
+v_no=sc.nextInt();
+System.out.print("enter brand:");
+brand=sc.nextLine();
+}
+
+}
+interface car implements vehicle  {
+final static String c_reg_date="100";
+public void car_d();
+ 
+}
+interface bike implements vehicle{
+final static String b_reg_date="200";
+public void bike_d();
+ 
+}
+ class customer implements car,bike{
+String name;
+public void car_d(){
+super();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter Car brand:");
+super.brand=sc.nextLine();
+
+}
+public void bike_d(){
+super();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter bike brand:");
+super.brand=sc.nextLine();
+}
+void customer(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name:");
+name=sc.nextLine();
+}
+void showdetails(){
+System.out.println("Name is:"+name);
+System.out.println("vehicle number is :"+v_no);
+System.out.println("vehicle number is :"+brand);
+System.out.println("regisration date is :"+b_reg_date);
+System.out.println("regisration date is :"+c_reg_date);
+
+}
+
+}
+
+class Main extends customer{
+public static void main(String args[]){
+customer c1=new customer();
+c1.car_d();
+
+c1.bike_d();
+
+c1.showdetails();
+}
+}
+
+
+
+
+
+
+
+//secnd
+import java.util.*;
+class vehicle{
+int v_no;
+String brand;
+void vehicle(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter vehicle number:");
+v_no=sc.nextInt();
+System.out.print("enter brand:");
+brand=sc.nextLine();
+}
+void showinfo(){
+System.out.println("vehicle number is :"+v_no);
+System.out.println("vehicle number is :"+brand);
+}
+}
+interface car implements vehicle  {
+final static String c_reg_date="";
+public void car_d();
+protected void showcar()
+{
+super.showinfo();
+System.out.println("regisration date is :"+c_reg_date);
+}
+}
+interface bike implements vehicle{
+final static String b_reg_date="";
+public void bike_d();
+protected void showbike()
+{
+super.showinfo();
+System.out.println("regisration date is :"+b_reg_date);
+
+}
+
+}
+class customer implements car,bike{
+String name;
+void car_d(){
+super();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter Car brand:");
+super.brand=sc.nextLine();
+System.out.print("enter registration date:");
+c_reg_date=sc.nextLine();
+}
+void bike_d(){
+super();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter bike brand:");
+super.brand=sc.nextLine();
+System.out.print("enter registration date:");
+b_reg_date=sc.nextLine();
+}
+customer(){
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name:");
+name=sc.nextLine();
+}
+void showcust(){
+System.out.println("Name is:"+name);
+}
+}
+class hy_inherit extends customer{
+public static void main(String args[]){
+customer c1=new customer();
+c1.car_d();
+c1.showcar();
+c1.bike_d();
+c1.showbike();
+c1.showcust();
+}
+}
