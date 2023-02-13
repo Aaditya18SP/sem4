@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+class studread{
+String name,rollno;
+int age;
+
+
+public static void main(String args[]){
+//getinfo();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name of ");
+name=sc.nextLine();
+System.out.print("enter rollno ");
+rollno=sc.nextLine();
+System.out.print("enter age:");
+age=sc.nextInt();
+try{
+File w1=new File("D:\\3944A017 SYIT\\JAVA\\pracs\\filehandling_files\\student.txt");
+FileWriter f1=new FileWriter(w1);
+f1.write("Name: "+name);
+f1.write("rollno: "+rollno);
+f1.write("age: "+age);
+f1.close();
+File ww1=new File("D:\\3944A017 SYIT\\JAVA\\pracs\\filehandling_files\\student.txt");
+FileReader r1=new FileReader(ww1);
+int ch;
+while((ch=r1.read())!=-1){
+System.out.print((char)ch);
+r1.close();
+}
+}
+catch(Exception e){
+
+}
+}
+}
