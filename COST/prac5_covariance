@@ -1,0 +1,23 @@
+data=read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\covariance.csv")
+print(data)
+x=data$x
+y=data$y
+meanx=mean(x)
+meany=mean(y)
+n=length(x)
+sum_cov=0L
+for(i in 1:n){
+sum_cov=sum_cov+((x[i]-meanx) * (y[i]-meany))
+}
+cov=sum_cov/n
+cat("the cov is :",cov,"\n")
+
+OUTPUT
+ year    x   y
+1 2015 1245 100
+2 2016 1415 123
+3 2017 1312 129
+4 2018 1427 143
+5 2019 1510 150
+6 2020 1590 197
+the cov is : 3148.5 
