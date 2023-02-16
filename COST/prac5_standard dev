@@ -1,0 +1,47 @@
+data=read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\Book1.csv")
+print(data)
+classm=data$class_m
+frequency=data$frequency
+
+n=0L
+xifi=c()
+sum_xifi=0L
+for(i in 1 :length(classm)){
+n=n+frequency[i]
+xifi[i]=(classm[i]*frequency[i])
+sum_xifi=sum_xifi+xifi[i]
+}
+data$xifi=xifi
+print(data)
+mean=sum_xifi/n
+cat("mean is :",mean,"\n")
+
+x_xbar=c()
+x_xbar=classm-mean #x-mean all stored in vec
+x_xbar=x_xbar^2 #square of x-xbar
+fx_xbarsq=c() #f*square of x-xbar
+sum_forsd=0L
+for(i in 1 :length(classm)){
+fx_xbarsq[i]=frequency[i]*x_xbar[i]
+sum_forsd=sum_forsd+fx_xbarsq[i]
+}
+sd=sqrt(sum_forsd/n)
+cat("the standard devaition is ",sd,"\n")
+cat("the variance is:",sd*sd,"\n")
+
+OUTPUT:
+     class class_m frequency
+1  0 to 10       5         6
+2 10 to 20      15        16
+3 20 to 30      25        24
+4 30 to 40      35        25
+5 40 to 50      45        17
+     class class_m frequency xifi
+1  0 to 10       5         6   30
+2 10 to 20      15        16  240
+3 20 to 30      25        24  600
+4 30 to 40      35        25  875
+5 40 to 50      45        17  765
+mean is : 28.52273 
+the standard devaition is  11.77823 
+the variance is: 138.7268 
