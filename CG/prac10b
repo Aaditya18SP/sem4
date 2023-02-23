@@ -1,0 +1,46 @@
+#include<graphics.h>
+#include <iostream.h>
+#include<conio.h>
+#include <dos.h>
+void main(){
+int gd=DETECT,gm,f=0;;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+for(int i=0;i<10;i++){
+if(f==1){
+cleardevice();
+setfillstyle(SOLID_FILL,YELLOW);
+circle(100,100,100);
+floodfill(100,100,WHITE);
+setfillstyle(SOLID_FILL,BLACK);
+circle(50,50,20);
+circle(150,50,20);
+floodfill(50,50,WHITE);
+floodfill(150,50,WHITE);
+setcolor(BLACK);
+line(50,150,150,150);
+delay(300);
+setcolor(WHITE);
+f=0;
+}
+else{
+cleardevice();
+setfillstyle(SOLID_FILL,YELLOW);
+circle(100,100,100);
+floodfill(100,100,WHITE);
+setfillstyle(SOLID_FILL,BLACK);
+circle(50,50,20);
+circle(150,50,20);
+floodfill(50,50,WHITE);
+floodfill(150,50,WHITE);
+setcolor(BLACK);
+arc(100,100,220,320,60);
+delay(300);
+setcolor(WHITE);
+f=1;
+
+}
+}
+
+getch();
+closegraph();
+}
