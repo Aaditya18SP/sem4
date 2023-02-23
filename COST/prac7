@@ -1,0 +1,4 @@
+data =read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\hypoexcel.csv")
+print(data)
+print(mean(data$volume))
+print(t.test(mu=500,alternative="less",conf.level=0.99))
