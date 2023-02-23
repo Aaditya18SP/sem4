@@ -1,0 +1,18 @@
+#include <iostream.h>
+#include <graphics.h>
+#include <conio.h>
+#include <dos.h>
+#include <stdlib.h>
+void main(){
+int gd=DETECT,gm;
+int font=4,size=8,direction=2,x=480,y=640,color=6;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+while(!kbhit()){
+settextstyle(random(font),random(direction),random(size));
+setcolor(random(color));
+outtextxy(random(x),random(y),"screensaver");
+ delay(250);
+ }
+ getch();
+ closegraph();
+}
