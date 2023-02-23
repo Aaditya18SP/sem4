@@ -1,0 +1,54 @@
+#include <iostream.h>
+#include <graphics.h>
+#include <conio.h>
+#include <dos.h>
+#include <stdlib.h>
+void main(){
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+/*int poly[]={100,150,100,100,150,100,200,50,300,50,350,100,400,100,400,150,100,150};
+drawpoly(9,poly);*/
+
+for(int i=0;i<getmaxx()-400;i=i+5){
+cleardevice();
+//road
+line(0,202,900,202);
+setfillstyle(SOLID_FILL,BLUE);
+line(100+i,100,150+i,100);
+line(150+i,100,200+i,50);
+line(200+i,50,300+i,50);
+line(300+i,50,350+i,100);
+line(350+i,100,400+i,100);
+line(400+i,100,400+i,175);
+line(400+i,175,350+i,175);
+arc(175+i,175,0,180,24);//wheel arc
+line(300+i,175,200+i,175);
+line(150+i,175,100+i,175);
+line(100+i,175,100+i,100);
+arc(325+i,175,0,180,24);//wheel arc
+floodfill(110+i,110,WHITE);
+//windows
+setfillstyle(BKSLASH_FILL,DARKGRAY);
+line(200+i,60,240+i,60);
+line(240+i,60,240+i,100);
+line(240+i,100,170+i,100);
+line(170+i,100,200+i,60);
+floodfill(210+i,70,WHITE);
+line(260+i,60,300+i,60);
+line(300+i,60,330+i,100);
+line(330+i,100,260+i,100);
+line(260+i,100,260+i,60);
+floodfill(270+i,70,WHITE);
+//wheels
+setfillstyle(SOLID_FILL,WHITE);
+circle(175+i,180,22);
+circle(325+i,180,22);
+floodfill(175+i,180,WHITE);
+floodfill(325+i,180,WHITE);
+delay(100);
+}
+
+getch();
+
+closegraph();
+}
