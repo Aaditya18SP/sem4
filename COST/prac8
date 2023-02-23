@@ -1,0 +1,37 @@
+#goodness of fit
+#if probability is similar for all observed values
+data =read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\chisq.csv")
+print(data)
+digit=data$digit
+freq=data$frequency
+print(chisq.test(freq))
+
+#if probability is not similar then store it in a vector 
+data=read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\mendels.csv")
+print(data)
+freq=data$freq
+p=c(9/16,3/16,3/16,1/16)
+print(chisq.test(freq,p))
+
+#2x2 contingency test
+#input all sample data ,then use table function, then use chisq.test() function 
+
+OUTPUT
+ digit frequency
+1      0        12
+2      1        20
+3      2        14
+4      3        12
+5      4        21
+6      5        18
+7      6        17
+8      7        26
+9      8        19
+10     9        21
+
+        Chi-squared test for given probabilities
+
+data:  freq
+X-squared = 9.7778, df = 9, p-value = 0.3688
+
+
