@@ -1,0 +1,71 @@
+data <- read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\regression.csv")
+print(data)
+x=data$year
+y=data$value
+relation <- lm(y~x,data)
+cat("the regression model is:\n")
+print(relation)
+cat("the summary is :\n")
+print(summary(relation))
+cat("the prediction for year 1999 is:\n")
+a <-data.frame(x=1999)
+b <- data.frame(x=2007)
+print(data)
+print(predict(relation,a))
+cat("the prediction for year 2007 is:\n")
+print(predict(relation,b))
+plot(x,y,col = 'blue',abline(relation),main = 'marks regression',xlab = 'year',ylab = 'marks')
+
+OUTPUT:
+ year value
+1 2000   265
+2 2001   270
+3 2002   280
+4 2003   290
+5 2004   300
+6 2005   320
+7 2006   310
+the regression model is:
+
+Call:
+lm(formula = y ~ x, data = data)
+
+Coefficients:
+(Intercept)            x  
+ -17950.893        9.107  
+
+the summary is :
+
+Call:
+lm(formula = y ~ x, data = data)
+
+Residuals:
+      1       2       3       4       5       6       7 
+ 1.6071 -2.5000 -1.6071 -0.7143  0.1786 11.0714 -8.0357 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -17950.893   2388.694  -7.515 0.000660 ***
+x                9.107      1.193   7.637 0.000613 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.31 on 5 degrees of freedom
+Multiple R-squared:  0.921,     Adjusted R-squared:  0.9052 
+F-statistic: 58.32 on 1 and 5 DF,  p-value: 0.0006125
+
+the prediction for year 1999 is:
+  year value
+1 2000   265
+2 2001   270
+3 2002   280
+4 2003   290
+5 2004   300
+6 2005   320
+7 2006   310
+       1 
+254.2857 
+the prediction for year 2007 is:
+       1 
+327.1429 
+
