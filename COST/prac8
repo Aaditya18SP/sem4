@@ -19,6 +19,10 @@ m=as.table(rbind(c(71,42),c(49,78)))
 dimnames(m)=list(physiotest=c("improved","notimproved"),customer=c("yes","no"))
 print(m)
 print(chisq.test(m))
+print(chisq.test(m,correct=FALSE))
+#correct=FALSE -->for no yates correction
+#correct=TRUE or do not specify -->for yates correction
+
  
 
 OUTPUT
@@ -59,7 +63,8 @@ physiotest    yes no
   improved     71 42
   notimproved  49 78
 
-        Pearson's Chi-squared test with Yates' continuity correction
+        Pearson's Chi-squared test 
 
 data:  m
-X-squared = 13.111, df = 1, p-value = 0.0002935
+X-squared = 14.065, df = 1, p-value = 0.0001766
+
