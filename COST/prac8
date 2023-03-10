@@ -11,7 +11,7 @@ data=read.csv("D:\\SYIT A017 AADITYA\\COST\\pracs\\mendels.csv")
 print(data)
 freq=data$freq
 p=c(9/16,3/16,3/16,1/16)
-print(chisq.test(freq,p))
+print(chisq.test(freq,p=p))
 
 #2x2 contingency test
 
