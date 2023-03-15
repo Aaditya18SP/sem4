@@ -1,0 +1,13 @@
+#linear regression
+x=c(151,174,138,186,128,136,179,163,152,131)
+y=c(63,81,56,91,47,57,76,72,62,48)
+relation=lm(y~x)
+print(relation)
+a=data.frame(x=149)
+print(predict(relation,a))
+b=data.frame(x=160)
+print(predict(relation,b))
+#png(file="lineareg.png")
+plot(x,y)
+plot(y,x,abline(lm(x~y)),col="blue",cex=1.56,pch=16,xlab="weigth",ylab="height",main="maintitle")
+#dev.off()

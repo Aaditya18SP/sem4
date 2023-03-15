@@ -1,0 +1,10 @@
+mat1=matrix(c(1,1,1,2,2,2,3,3,3),nrow=3,ncol=3,byrow=TRUE)
+mat2=matrix(c(1,1,1,2,2,2,6,3,3),nrow=3,ncol=3,byrow=TRUE)
+mat3=matrix(,nrow=3,ncol=3)
+mat3=mat1+mat2
+print(mat3)
+mat4=mat1%*%mat2
+print(mat4)
+print(t(mat4))
+mat5=matrix(c(1,4,1,5,0,2,6,3,3),nrow=3,ncol=3,byrow=TRUE)
+print(solve(mat5))
