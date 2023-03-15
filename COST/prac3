@@ -1,7 +1,7 @@
 #mode=function(x){
 #unique_x=unique(x);
 #tabulate_x=tabulate(match(x,unique_x));
-#unique_x[tabulate_x==max(tabulate_x)];
+#unique_x[which.max(tabulate_x)];
 #}
 mode=function(ele_v){
 count=0L
